@@ -1,0 +1,28 @@
+{
+  "name": "cse340-practice-green",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "packageManager": "pnpm@12.5.1",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --env-file=.env server.js",
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.5.1",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
