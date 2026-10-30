@@ -56,6 +56,17 @@ nav a:focus-visible {
   transform: translateY(-1px);
 }
 
+.greeting {
+  border-left: 4px solid #2c5aa0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: -18px auto 28px;
+  max-width: 820px;
+  padding: 8px 16px;
+  text-align: right;
+}
+
 main {
   border: 1px solid #ddd;
   background: white;
