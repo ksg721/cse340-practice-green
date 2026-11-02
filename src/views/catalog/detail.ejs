@@ -1,14 +1,14 @@
-<%- include('partials/header') %>
+<%- include('../partials/header') %>
 <main>
-    <div class="course-header">
+    <div class="catalog-header">
         <h1><%= course.courseCode %> - <%= course.name %></h1>
 
-        <p class="course-meta">
+        <p class="catalog-meta">
             <%= course.courseCode %> &bull;
             <%= course.creditHours %> credit hours
         </p>
 
-        <p class="course-description">
+        <p class="catalog-description">
             <%= course.description %>
         </p>
     </div>
@@ -17,8 +17,8 @@
         <p>Currently sorted by: <%= currentSort %></p>
     </div>
 
-    <div class="sections">
-        <div class="sections-header">
+    <div class="catalog-sections">
+        <div class="catalog-sections-header">
             <h2>Available Sections</h2>
 
             <div class="sort-options">
@@ -47,18 +47,18 @@
         <% if (sections.length === 0) { %>
             <p>No sections are currently available for this course.</p>
         <% } else { %>
-            <div class="section-list">
+            <div class="catalog-section-list">
                 <% sections.forEach(section => { %>
-                    <div class="section-card">
-                        <div class="section-time">
+                    <div class="catalog-section-card">
+                        <div class="catalog-section-time">
                             <%= section.time %>
                         </div>
 
-                        <div class="section-room">
+                        <div class="catalog-section-room">
                             Room: <%= section.room %>
                         </div>
 
-                        <div class="section-professor">
+                        <div class="catalog-section-professor">
                             Instructor:
                             <a href="/faculty/<%= section.professorSlug %>">
                                 <%= section.professor %>
@@ -70,10 +70,10 @@
         <% } %>
     </div>
 
-    <div class="navigation">
+    <div class="catalog-navigation">
         <p>
             <a href="/catalog">&larr; Back to Course Catalog</a>
         </p>
     </div>
 </main>
-<%- include('partials/footer') %>
+<%- include('../partials/footer') %>
